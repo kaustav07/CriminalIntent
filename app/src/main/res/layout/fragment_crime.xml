@@ -1,0 +1,114 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.android.bignerdranch.criminalintent.Fragments.CrimeFragment">
+
+
+    <TextView
+        android:id="@+id/criminaltitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/mTitle"
+        app:layout_constraintStart_toEndOf="@+id/crimeimage"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/crimetitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/criminaltitle"
+        app:layout_constraintTop_toBottomOf="@+id/criminaltitle"/>
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/mDetails"
+        app:layout_constraintStart_toStartOf="@+id/capturebtn"
+        app:layout_constraintTop_toBottomOf="@+id/crimetitle"/>
+
+    <Button
+        android:id="@+id/crimedate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="11dp"
+        android:text="Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/details"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details"/>
+
+    <CheckBox
+        android:id="@+id/crimesolved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/mSolved"
+        app:layout_constraintLeft_toLeftOf="@+id/crimedate"
+        app:layout_constraintTop_toBottomOf="@+id/crimedate"/>
+
+    <Button
+        android:id="@+id/choosesuspect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Choose Suspect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/crimesolved"
+        app:layout_constraintTop_toBottomOf="@+id/crimesolved"/>
+
+    <Button
+        android:id="@+id/sendreport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Send Report"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/choosesuspect"
+        app:layout_constraintTop_toBottomOf="@+id/choosesuspect"/>
+
+    <Button
+        android:id="@+id/callsuspect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Call Suspect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/sendreport"
+        app:layout_constraintTop_toBottomOf="@+id/sendreport"/>
+
+    <ImageView
+        android:id="@+id/crimeimage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/capturebtn"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintStart_toStartOf="@+id/crimeimage"
+        app:layout_constraintTop_toBottomOf="@+id/crimeimage"/>
+</android.support.constraint.ConstraintLayout>
